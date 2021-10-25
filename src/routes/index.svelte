@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import GameCanvas from "$lib/game-canvas.svelte";
 	import Ball from "$lib/ball.svelte";
 	import Paddle from "$lib/paddle.svelte";
