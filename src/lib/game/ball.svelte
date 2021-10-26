@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { getRandomBoolean, getRandomInteger } from "./utils";
+	import { getRandomBoolean, getRandomInteger } from "../utils";
 
 	var ballElement: Element;
 	var holderElement: Element;
