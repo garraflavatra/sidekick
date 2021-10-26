@@ -6,9 +6,9 @@
 	}
 </script>
 
-<div class="paddle" style="top: {yPosition}px"></div>
+<div class="paddle" style="top: {yPosition}px" />
 
-<svelte:body on:mousemove={handleMouseMove}/>
+<svelte:body on:mousemove={handleMouseMove} />
 
 <style>
 	.paddle {

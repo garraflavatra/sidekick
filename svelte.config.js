@@ -7,7 +7,7 @@ const config = {
 
 	kit: {
 		target: '#svelte',
-		adapter: static_adapter(),
+		adapter: static_adapter()
 	}
 };
 

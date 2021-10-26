@@ -1,16 +1,14 @@
 <script lang="ts">
-	import Kbd from "./kbd.svelte";
+	import Kbd from './kbd.svelte';
 
-	export let items = [
-		{ key: 'a', label: 'about' },
-	];
+	export let items = [{ key: 'a', label: 'about' }];
 </script>
 
 <nav>
 	<table>
 		{#each items as item}
 			<tr>
-				<td><Kbd key="{item.key}"/></td>
+				<td><Kbd key={item.key} /></td>
 				<td>{item.label}</td>
 			</tr>
 		{/each}

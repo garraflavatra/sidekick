@@ -1,5 +1,5 @@
 <div class="game">
-	<slot></slot>
+	<slot />
 </div>
 
 <style>

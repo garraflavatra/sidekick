@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Kbd from "./kbd.svelte";
+	import Kbd from './kbd.svelte';
 
 	export let open = false;
 
@@ -10,12 +10,16 @@
 	}
 </script>
 
-<svelte:body on:keypress={onKeypress}/>
+<svelte:body on:keypress={onKeypress} />
 
-<div class="modal" class:open={open}>
-	<slot></slot>
-	<button on:click={() => { open = !open }}>
-		<Kbd key="esc"/> close
+<div class="modal" class:open>
+	<slot />
+	<button
+		on:click={() => {
+			open = !open;
+		}}
+	>
+		<Kbd key="esc" /> close
 	</button>
 </div>
 
