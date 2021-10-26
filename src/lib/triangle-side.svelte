@@ -1,3 +1,14 @@
+<script lang="ts" context="module">
+	import type { Coordinates } from "./coordinates";
+
+	export const coordinates: Coordinates = {
+		x: 0,
+		y: 0,
+		width: 20,
+		height: 20 * 500,
+	};
+</script>
+
 <div class="triangles">
 	{#each [...Array(500).keys()] as n}
 		<div class="triangle" id="triangle-{n}"></div>
