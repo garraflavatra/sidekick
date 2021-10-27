@@ -1,16 +1,18 @@
 <script lang="ts" context="module">
 	import type { Coordinates } from './coordinates';
 
+	export let triangleCount = 200;
+
 	export const coordinates: Coordinates = {
 		x: 0,
 		y: 0,
 		width: 20,
-		height: 20 * 500
+		height: 20 * triangleCount
 	};
 </script>
 
 <div class="triangles">
-	{#each [...Array(500).keys()] as n}
+	{#each [...Array(triangleCount).keys()] as n}
 		<div class="triangle" id="triangle-{n}" />
 	{/each}
 </div>
