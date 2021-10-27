@@ -6,7 +6,7 @@
 	}
 </script>
 
-<div class="paddle" style="top: {yPosition}px" />
+<div class="paddle" style="top: calc({yPosition}px - 10vh);" />
 
 <svelte:body on:mousemove={handleMouseMove} />
 
