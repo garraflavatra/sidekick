@@ -30,7 +30,7 @@ body,
 	padding: 0;
 	color: var(--fg);
 	font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
-	font-size: 16;
+	font-size: 16px;
 	user-select: none;
 	line-height: 1.5;
 }
