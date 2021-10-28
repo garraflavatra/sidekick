@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x] # 12.x, 14.x,
+        node-version: [14.x] # 12.x, 14.x,
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,3 +29,13 @@ jobs:
         with:
           name: build
           path: build/
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: svelte-kit
+          path: .svelte-kit/
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: netlify
+          path: .netlify/
