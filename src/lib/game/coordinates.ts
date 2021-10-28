@@ -4,11 +4,3 @@ export interface Coordinates {
 	width: number;
 	height: number;
 }
-
-export function getOffset(el) {
-	const rect = el.getBoundingClientRect();
-	return {
-		x: rect.left + window.scrollX,
-		y: rect.top + document.documentElement.scrollTop
-	};
-}
