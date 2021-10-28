@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	import type { Coordinates } from './coordinates';
 
-	export let triangleCount = 200;
+	export const triangleCount = 200;
 
 	export const coordinates: Coordinates = {
 		x: 0,
