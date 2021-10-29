@@ -1,7 +1,8 @@
 name: Deploy Storybook
 
 on:
-  push: [dev]
+  push:
+    branches: [dev]
 
 jobs:
   publish:
