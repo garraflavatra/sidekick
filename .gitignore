@@ -5,3 +5,4 @@ build.zip
 /.svelte-kit
 /.netlify
 /package
+/storybook-static
