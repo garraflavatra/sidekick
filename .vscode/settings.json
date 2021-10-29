@@ -1,11 +1,6 @@
 {
-	"editor.tabSize": 4,
-	"editor.insertSpaces": false,
-	"editor.detectIndentation": false,
-
-	"[toml]": {
-		"editor.tabSize": 2,
-		"editor.insertSpaces": true
-	},
-	"git.alwaysSignOff": true
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "git.alwaysSignOff": true
 }
