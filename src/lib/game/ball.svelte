@@ -1,34 +1,54 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { getRandomBoolean, getRandomInteger } from '../utils';
+	import { getRandomBoolean, getRandomFloat, getRandomInteger } from '../random';
+
+	import apple from '../../assets/ball/apple.png';
+	import baseball from '../../assets/ball/baseball.png';
+	import clover from '../../assets/ball/clover.png';
+	import cookie from '../../assets/ball/cookie.png';
+	import stroopwafel from '../../assets/ball/stroopwafel.png';
+
+	const balls = [apple, baseball, clover, cookie, stroopwafel];
+
+	let currentBall: string;
+
+	function randomBall(): void {
+		const random = getRandomInteger(0, balls.length - 1);
+		currentBall = balls[random];
+		return;
+	}
+
+	randomBall();
 
 	var ballElement: Element;
 	var holderElement: Element;
 	var timeX = 2;
 	var timeY = 2;
 
+	function randomizeDuration(): void {
+		const random = getRandomFloat(1, 7);
+		if (getRandomBoolean()) timeX = random;
+		else timeY = random;
+		return;
+	}
+
+	randomizeDuration();
+
 	onMount(() => {
-		function randomizeDuration(): void {
-			const random = getRandomInteger(1, 7);
-			if (getRandomBoolean()) timeX = random;
-			else timeY = random;
-			return;
-		}
-
-		randomizeDuration();
-
 		setTimeout(() => {
 			holderElement.setAttribute('style', '');
 		}, 1500);
 	});
+
+	setInterval(() => {
+		randomBall();
+	}, 5000);
 </script>
 
 <div style="--x: {timeX}s; --y: {timeY}s;">
 	<div class="holder" style="margin-left: 50px;" bind:this={holderElement}>
 		<div class="x" bind:this={ballElement}>
-			<svg xmlns="http://www.w3.org/2000/svg" class="ball" viewBox="0 0 16 16">
-				<circle cx="8" cy="8" r="8" />
-			</svg>
+			<img src={currentBall} alt="Ball" class="ball" />
 		</div>
 	</div>
 </div>
