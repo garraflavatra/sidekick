@@ -2,8 +2,8 @@ import NavigationBar from './navigation-bar.svelte';
 
 export default {
   title: 'Components/NavigationBar',
-  component: NavigationBar,
-}
+  component: NavigationBar
+};
 
 export const Default = () => ({
   Component: NavigationBar,
