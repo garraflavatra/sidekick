@@ -4,6 +4,10 @@
   import '../app.css';
 </script>
 
+<svelte:head>
+  <title>Sidekick</title>
+</svelte:head>
+
 <Navigation />
 <NavigationBar />
 <slot />
